@@ -16,7 +16,7 @@ public class DialogManager {
 	private static DialogManager _instance;
 	
 	private int _id;
-	private SparseArray<AlertDialog> _dialogs;
+	private SparseArray<androidx.appcompat.app.AlertDialog> _dialogs;
 	
 	private String decideLabel;
 	private String cancelLabel;
@@ -27,7 +27,7 @@ public class DialogManager {
 	 */
 	private DialogManager() {
 		_id = 0;
-		_dialogs = new SparseArray<AlertDialog>();
+		_dialogs = new SparseArray<androidx.appcompat.app.AlertDialog>();
 		decideLabel = "Yes";
 		cancelLabel = "No";
 		closeLabel = "Close";
@@ -68,7 +68,7 @@ public class DialogManager {
 					}
 				};
 				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
 				.setPositiveButton(decideLabel, positiveListener)
@@ -108,8 +108,8 @@ public class DialogManager {
 						_dialogs.delete(id);
 					}
 				};
-				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
+
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
 				.setTitle(title)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
@@ -142,8 +142,8 @@ public class DialogManager {
 						_dialogs.remove(id);
 					}
 				};
-				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
+
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)
 				.show();
@@ -175,8 +175,8 @@ public class DialogManager {
 						_dialogs.remove(id);
 					}
 				};
-				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
+
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
 				.setTitle(title)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)
@@ -190,7 +190,7 @@ public class DialogManager {
 	}
 	
 	public void dissmissDialog(int id) {
-		AlertDialog dialog = _dialogs.get(id);
+		androidx.appcompat.app.AlertDialog dialog = _dialogs.get(id);
 		if(dialog == null) {
 			return;
 		}

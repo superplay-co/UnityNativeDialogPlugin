@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.util.SparseArray;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import android.util.Log;
 
 import com.unity3d.player.UnityPlayer;
 

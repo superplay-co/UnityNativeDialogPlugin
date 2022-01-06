@@ -71,7 +71,7 @@ public class DialogManager {
 					}
 				};
 				
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
 				.setPositiveButton(decideLabel, positiveListener)
@@ -93,8 +93,6 @@ public class DialogManager {
 		
 		final int id = _id;
 		final Activity a = UnityPlayer.currentActivity;
-		Log.e(TAG, "Got activity");
-		Log.e(TAG, "Activity name is " + a.getComponentName());
 		a.runOnUiThread(new Runnable() {
 			
 			public void run() {
@@ -114,7 +112,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
 				.setTitle(title)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
@@ -148,7 +146,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)
 				.show();
@@ -181,7 +179,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
 				.setTitle(title)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)

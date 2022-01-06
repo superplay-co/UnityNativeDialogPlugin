@@ -68,7 +68,7 @@ public class DialogManager {
 					}
 				};
 				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
+				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
 				.setPositiveButton(decideLabel, positiveListener)
@@ -109,7 +109,7 @@ public class DialogManager {
 					}
 				};
 				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
+				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
 				.setTitle(title)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
@@ -143,7 +143,7 @@ public class DialogManager {
 					}
 				};
 				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
+				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)
 				.show();
@@ -176,7 +176,7 @@ public class DialogManager {
 					}
 				};
 				
-				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
+				AlertDialog dialog = new MaterialAlertDialogBuilder.Builder(a)
 				.setTitle(title)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)

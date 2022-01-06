@@ -21,6 +21,8 @@ public class DialogManager {
 	private String decideLabel;
 	private String cancelLabel;
 	private String closeLabel;
+
+	private static final String TAG = "NativeDialog Logs";
 	
 	/**
 	 * singleton class 
@@ -90,6 +92,8 @@ public class DialogManager {
 		
 		final int id = _id;
 		final Activity a = UnityPlayer.currentActivity;
+		Log.e(TAG, "Got activity");
+		Log.e(TAG, "Activity name is " + a.getComponentName());
 		a.runOnUiThread(new Runnable() {
 			
 			public void run() {

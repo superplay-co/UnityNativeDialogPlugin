@@ -72,7 +72,7 @@ public class DialogManager {
 					}
 				};
 				
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, androidx.appcompat.R.style.Theme_AppCompat_DayNight_Dialog)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
 				.setPositiveButton(decideLabel, positiveListener)
@@ -113,7 +113,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, androidx.appcompat.R.style.Theme_AppCompat_DayNight_Dialog)
 				.setTitle(title)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
@@ -147,7 +147,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, androidx.appcompat.R.style.Theme_AppCompat_DayNight_Dialog)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)
 				.show();
@@ -180,7 +180,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, androidx.appcompat.R.style.Theme_AppCompat_DayNight_Dialog)
 				.setTitle(title)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)

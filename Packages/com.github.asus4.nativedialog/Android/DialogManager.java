@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.util.SparseArray;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import android.util.Log;
 
 import com.unity3d.player.R;
@@ -18,7 +17,7 @@ public class DialogManager {
 	private static DialogManager _instance;
 	
 	private int _id;
-	private SparseArray<androidx.appcompat.app.AlertDialog> _dialogs;
+	private SparseArray<AlertDialog> _dialogs;
 	
 	private String decideLabel;
 	private String cancelLabel;
@@ -31,7 +30,7 @@ public class DialogManager {
 	 */
 	private DialogManager() {
 		_id = 0;
-		_dialogs = new SparseArray<androidx.appcompat.app.AlertDialog>();
+		_dialogs = new SparseArray<AlertDialog>();
 		decideLabel = "Yes";
 		cancelLabel = "No";
 		closeLabel = "Close";
@@ -72,7 +71,7 @@ public class DialogManager {
 					}
 				};
 				
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				AlertDialog dialog = new AlertDialog.Builder(a)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
 				.setPositiveButton(decideLabel, positiveListener)
@@ -113,7 +112,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				AlertDialog dialog = new AlertDialog.Builder(a)
 				.setTitle(title)
 				.setMessage(msg)
 				.setNegativeButton(cancelLabel, negativeListener)
@@ -147,7 +146,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				AlertDialog dialog = new AlertDialog.Builder(a)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)
 				.show();
@@ -180,7 +179,7 @@ public class DialogManager {
 					}
 				};
 
-				androidx.appcompat.app.AlertDialog dialog = new MaterialAlertDialogBuilder(a, R.style.Theme_MaterialComponents_DayNight_Dialog)
+				AlertDialog dialog = new AlertDialog.Builder(a)
 				.setTitle(title)
 				.setMessage(msg)
 				.setPositiveButton(closeLabel, positiveListener)
@@ -194,7 +193,7 @@ public class DialogManager {
 	}
 	
 	public void dissmissDialog(int id) {
-		androidx.appcompat.app.AlertDialog dialog = _dialogs.get(id);
+		AlertDialog dialog = _dialogs.get(id);
 		if(dialog == null) {
 			return;
 		}
